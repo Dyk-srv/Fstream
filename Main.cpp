@@ -91,10 +91,11 @@ int main() {
 	unsigned int year_index = date.rfind('.') + 1;
 	unsigned int month_index = date.find('.') + 1;
 
-	unsigned int day = std::stoi(date.substr(0, month_index - 1));
-	unsigned int month = std::stoi(date.substr(month_index, year_index - 1 - month_index));
+	unsigned int day = std::stoi(date.substr(0));
+	unsigned int month = std::stoi(date.substr(month_index));
 	unsigned int year = std::stoi(date.substr(year_index));
 
+	std::cout << date.substr(0, month_index) << std::endl;;
 	std::cout << "День:  " << day << std::endl;
 	std::cout << "Месяц: " << month << std::endl;
 	std::cout << "Год:   " << year << std::endl;

@@ -95,7 +95,6 @@ int main() {
 	unsigned int month = std::stoi(date.substr(month_index));
 	unsigned int year = std::stoi(date.substr(year_index));
 
-	std::cout << date.substr(0, month_index) << std::endl;;
 	std::cout << "День:  " << day << std::endl;
 	std::cout << "Месяц: " << month << std::endl;
 	std::cout << "Год:   " << year << std::endl;

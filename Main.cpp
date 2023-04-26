@@ -88,10 +88,10 @@ int main() {
 		std::cout << "Ошибка открытия файла!\n";
 	in.close();
 
-	unsigned int year_index = date.rfind('.') + 1;
 	unsigned int month_index = date.find('.') + 1;
-
-	unsigned int day = std::stoi(date.substr(0));
+	unsigned int year_index = date.rfind('.') + 1;
+	
+	unsigned int day = std::stoi(date.substr(0, month_index - 1));
 	unsigned int month = std::stoi(date.substr(month_index, year_index - 1 - month_index));
 	unsigned int year = std::stoi(date.substr(year_index));
 
